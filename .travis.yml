@@ -1,7 +1,6 @@
 language: go
 
 go:
-  - "1.8"
   - "1.9"
   - "1.10"
   - tip
@@ -13,10 +12,9 @@ script:
   - golint ./...
   - go test -v
 
-
 install:
   - go get -v -t .
 
 matrix:
-    allow_failures:
-        - go: tip
+  allow_failures:
+    - go: tip
